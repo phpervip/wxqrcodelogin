@@ -3,10 +3,11 @@ include_once 'config.php';
 
 //https://mp.weixin.qq.com/wiki/10/2adfb2f10828e87aa1e5c3ef83b17906.html
 
-$sql = "INSERT INTO `qrcode` (`addtime`) VALUES ('" . time() . "')";
 
+
+$sql = "INSERT INTO `qrcode` (`addtime`) VALUES ('" . time() . "')";
 mysqli_query($link,$sql);
-$scene_id = mysqli_insert_id();
+$scene_id = mysqli_insert_id($link);
 
 $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' . $appid . '&secret=' . $appsecret;
 $access_token_array = json_decode(curlGet($url), true);
