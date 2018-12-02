@@ -5,8 +5,8 @@ include_once 'config.php';
 
 $sql = "INSERT INTO `qrcode` (`addtime`) VALUES ('" . time() . "')";
 
-mysql_query($sql);
-$scene_id = mysql_insert_id();
+mysqli_query($link,$sql);
+$scene_id = mysqli_insert_id();
 
 $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' . $appid . '&secret=' . $appsecret;
 $access_token_array = json_decode(curlGet($url), true);
@@ -45,6 +45,7 @@ if (!$json['errcode']) {
             check_login();
             function check_login() {
                 $.post("check_login.php", {scene_id: <?php echo $scene_id; ?>}, function(data) {
+                    console.log(data);
                     var attention = '首次关注';
                     if (data.is_first == 1) {
                         attention = '已关注过';
