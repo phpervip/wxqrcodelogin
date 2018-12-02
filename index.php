@@ -1,5 +1,5 @@
 <?php
-include_once 'config.php';
+include_once 'wx/config.php';
 
 //https://mp.weixin.qq.com/wiki/10/2adfb2f10828e87aa1e5c3ef83b17906.html
 
