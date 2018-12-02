@@ -3,8 +3,6 @@ include_once 'config.php';
 
 //https://mp.weixin.qq.com/wiki/10/2adfb2f10828e87aa1e5c3ef83b17906.html
 
-
-
 $sql = "INSERT INTO `qrcode` (`addtime`) VALUES ('" . time() . "')";
 mysqli_query($link,$sql);
 $scene_id = mysqli_insert_id($link);

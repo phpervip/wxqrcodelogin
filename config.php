@@ -10,6 +10,13 @@ $timezone = "Asia/Shanghai";
 
 
 $link = mysqli_connect($host, $db_user, $db_pass,$db_name);
+
+/* check connection */
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
+
 mysqli_query($link,"SET names UTF8");
 
 
