@@ -13,6 +13,6 @@ mysql_select_db($db_name, $link);
 mysql_query("SET names UTF8");
 
 
-$appid = 'wx422126b0b6bbfcfc';
-$appsecret = '45843e705995a12106155f4c26f716dc';
+$appid = 'wx9c45ac1710eb8a3a';
+$appsecret = '64c8fdf0bdeaec473f9e4d971a63176a';
 ?>
