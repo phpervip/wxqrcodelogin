@@ -5,7 +5,7 @@ session_start();
 $host = "localhost";
 $db_user = "sucaihuo";
 $db_pass = "123456";
-$db_name = "demo";
+$db_name = "wxqrcodelogin";
 $timezone = "Asia/Shanghai";
 
 $link = mysql_connect($host, $db_user, $db_pass);
