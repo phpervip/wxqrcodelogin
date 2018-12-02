@@ -1,0 +1,8 @@
+PHP微信扫码关注公众号并登录
+在csdn下载了一个Demo
+https://download.csdn.net/download/qq_33639522/10790193
+
+1.把wx目录放到网站根目录
+2.登录https://mp.weixin.qq.com，在基本配置 中设置http://域名/wx/valid.php 
+3.基本配置 中 Token(令牌) 设置成 sucaihuo
+4.修改 config.php和 wx/config.php中的 数据库配置 和appid appsecret
