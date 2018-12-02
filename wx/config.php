@@ -8,9 +8,9 @@ $db_pass = "123456";
 $db_name = "wxqrcodelogin";
 $timezone = "Asia/Shanghai";
 
-$link = mysql_connect($host, $db_user, $db_pass);
-mysql_select_db($db_name, $link);
-mysql_query("SET names UTF8");
+$link = mysqli_connect($host, $db_user, $db_pass);
+mysqli_select_db($link,$db_name);
+mysqli_query($link,"SET names UTF8");
 
 
 $appid = 'wx9c45ac1710eb8a3a';
